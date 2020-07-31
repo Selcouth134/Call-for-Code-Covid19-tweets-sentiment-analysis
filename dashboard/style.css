@@ -1,0 +1,158 @@
+body {
+    font-family : 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+/* NAVIGATION */
+nav {
+  width: 80%;
+  margin: 0 auto;
+  background: rgba(111, 82, 192, 0.836);
+  padding: 18px 0;
+}
+  
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: rgb(243, 240, 237);
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+  
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: rgb(73, 67, 67);
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color: #023f1c;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+  
+/* Keyframes */
+@keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: rgb(108, 211, 151);
+  }
+}
+
+
+.chart-container {
+    margin: 40px auto;
+    width: 100%;
+}
+
+.firstChart {
+    width: 590px !important;
+    height: 500px !important;
+    margin-top: 20px ;
+    margin-left: 100px;
+    display: inline-table;
+}
+
+.main-head {
+  color: rgb(47, 91, 133);
+  font-size: 30px;
+  margin-top: 60px ;
+  margin-left: 420px;
+}
+
+.month-chart {
+  width: 790px !important;
+  margin: 40px auto 80px auto;
+}
+
+.month-pie {
+  width: 580px !important;
+  height: 300px !important;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+.image-container {
+  width: 90%;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.image-container figure {
+  width: 40%;
+  margin-bottom: 50px;
+}
+
+figure img {
+  background-size: contain;
+  width: 100%;
+}
+
+figcaption {
+  padding: 5px;
+  font-size: 21px;
+  font-weight: 100;
+}
+
+figure:hover {
+  box-shadow: 0px 1px 8px 1px rgba(192, 192, 192, 0.733)
+}

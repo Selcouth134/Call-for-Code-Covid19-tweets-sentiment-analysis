@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Sentiment Data</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+
+    <nav class="stroke">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#">Region Wise</a></li>
+          <li><a href="/month.html">Month Wise</a></li>
+          <li><a href="/hot-keywords.html">Hot keywords</a></li>
+        </ul>
+      </nav>
+
+    <p class="main-head">
+        <centre>Overall Data visualization of covid19 from Twitter</centre>
+    </p>
+
+    <div class="chart-container">
+        <div class="firstChart">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="firstChart">
+            <canvas id="pie-chart"></canvas>
+        </div>
+    </div>
+
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" 
+    integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" 
+    crossorigin="anonymous">
+    </script>
+    <script src="scriptHome.js"></script>
+</body>
+</html>
